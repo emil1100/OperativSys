@@ -1,4 +1,2 @@
-i = i + ".py"
-f = open(i, "w")
-f.write(".. .")
-print(i)
+open9 = location + i[1]
+os.remove(open9)

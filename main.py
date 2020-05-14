@@ -8,7 +8,8 @@ location = input("where is this program? ")
 
 login = 0
 
-l = open("home/root/saved_passwd.txt", "r")
+open1 = location + "home/root/saved_passwd.txt"
+l = open(open1, "r")
 t = l.read()
 exec(t)
 
@@ -43,12 +44,14 @@ while login != 1:
 
 if login == 1:
   os.system('clear')
-  f = open("saves/cach/location", "w")
+  open2 = location + "saves/cach/location"
+  f = open(open2, "w")
   if location != '':
     f.write(location + "home/")
   elif location == '':
     f.write("home/")
-  f = open("saves/configurations.py", "r")
+  open3 = location + "saves/configurations.py"
+  f = open(open3, "r")
   ff = f.read()
   tf = "t"
   
@@ -122,18 +125,26 @@ while power == 1:
   i = ii
   try:
     ii = "home/root/program/" + i[0] + ".py"
-    p = open(ii, "r")
+    open4 = location + ii
+    p = open(open4, "r")
     k = p.read()
     exec(k)
   except:
     try:
-      ii = "home/root/program/funktioner/" + i[0] + ".py"
-      p = open(ii, "r")
+      ii = "home/root/program/" + i[0]
+      open4 = location + ii
+      p = open(open4, "r")
       k = p.read()
-      exec(k)
     except:
       try:
-        exec(y)
+        ii = "home/root/program/funktioner/" + i[0] + ".py"
+        open5 = location + ii
+        p = open(open5, "r")
+        k = p.read()
+        exec(k)
       except:
-        print("\033[0m\033[1;32;48mSyntaxError: ", y, " ")
-        tf = "f"
+        try:
+          exec(y)
+        except:
+          print("\033[0m\033[1;32;48mSyntaxError: ", y, " ")
+          tf = "f"

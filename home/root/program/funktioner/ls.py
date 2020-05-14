@@ -2,7 +2,9 @@ import os
 f = open("saves/cach/location", "r")
 l = f.read()
 try:
-  p = os.listdir(i[1])
+  open7 = location + i[1]
+  p = os.listdir(open7)
 except:
-  p = os.listdir(l + i[1])
+  open8 = location + l + i[1]
+  p = os.listdir(open8)
 print(p)
