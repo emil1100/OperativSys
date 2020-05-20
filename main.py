@@ -7,11 +7,18 @@ location = input("where is this program? ")
 #vit text: \033[0;37;40m
 
 login = 0
-
-open1 = location + "home/root/saved_passwd.txt"
-l = open(open1, "r")
-t = l.read()
-exec(t)
+try:
+  open1 = location + "home/root/saved_passwd.txt"
+  l = open(open1, "r")
+  t = l.read()
+  exec(t)
+except:
+  location = location + "/"
+  open1 = location + "home/root/saved_passwd.txt"
+  l = open(open1, "r")
+  t = l.read()
+  exec(t)
+  
 
 print("\033[0m\033[1;32;48m")
 f = 0
@@ -33,7 +40,7 @@ while login != 1:
     p = p
   try:
     if i == p:
-      l = os.listdir("home/User/" + usr)
+      l = os.listdir(location + "home/User/" + usr)
       login = 1
   except:
     p = p
@@ -70,9 +77,9 @@ if login == 1:
   print("   00000000000000000000000   ")
   print("")
 try:
-  l = os.listdir("home/User/" + usr)
+  l = os.listdir(location + "home/User/" + usr)
 except:
-  for i in range(99999999999999999999999999999999999999999999):
+  for i in range(99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999):
     print("Hacker Alarm!")
 
 
