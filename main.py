@@ -1,4 +1,5 @@
 import os
+import time
 
 location = input("where is this program? ")
 #standard: \033[0m\033[1;32;48m
@@ -18,36 +19,11 @@ except:
   l = open(open1, "r")
   t = l.read()
   exec(t)
-  
 
-print("\033[0m\033[1;32;48m")
-f = 0
-while login != 1:
-  if f >= 10:
-    for f in range(100000000000000000):
-      input("User : ")
-      input("password: \033[0;30;40m")
-      print("\033[0m\033[1;32;48m")
-    f = 0
-  i = input("User: ")
-  usr = i
-  p = input("password: \033[0;30;40m")
-  f = f + 1
-  print("\033[0m\033[1;32;48m")
-  try:
-    exec("i = " + i)
-  except:
-    p = p
-  try:
-    if i == p:
-      l = os.listdir(location + "home/User/" + usr)
-      login = 1
-  except:
-    p = p
-  try:
-    exec(usr)
-  except:
-    i = i
+open77 = location + "home/root/login.py"
+f = open(open77, "r")
+l = f.read()
+exec(l)
 
 if login == 1:
   os.system('clear')
@@ -78,9 +54,26 @@ if login == 1:
   print("")
 try:
   l = os.listdir(location + "home/User/" + usr)
+  if usr == "":
+    fssdif
 except:
-  for i in range(99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999):
-    print("Hacker Alarm!")
+  for i in range(99999999999999999999999999999999 * 99999999999999999999999999999999999999999999999999999999999):
+    slleep = 0.05
+    print("\033[0m\033[0;31;48mHacker Alarm!")
+    time.sleep(slleep)
+    print("\033[0m\033[1;33;48mHacker Alarm!")
+    time.sleep(slleep)
+    print("\033[0m\033[1;93;48mHacker Alarm!")
+    time.sleep(slleep)
+    print("\033[0m\033[1;32;48mHacker Alarm!")
+    time.sleep(slleep)
+    print("\033[0m\033[1;96;48mHacker Alarm!")
+    time.sleep(slleep)
+    print("\033[0m\033[1;34;48mHacker Alarm!")
+    time.sleep(slleep)
+    print("\033[0m\033[1;35;48mHacker Alarm!")
+    time.sleep(slleep)
+
 
 
 
