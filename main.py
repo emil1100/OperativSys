@@ -58,7 +58,7 @@ try:
     fssdif
 except:
   for i in range(99999999999999999999999999999999 * 99999999999999999999999999999999999999999999999999999999999):
-    slleep = 0.05
+    slleep = 0.005
     print("\033[0m\033[0;31;48mHacker Alarm!")
     time.sleep(slleep)
     print("\033[0m\033[1;33;48mHacker Alarm!")
