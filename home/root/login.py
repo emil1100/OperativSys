@@ -2,7 +2,7 @@ print("\033[0m\033[1;32;48m")
 f = 0
 while login != 1:
   if f >= 10:
-    for f in range(100000000000000000):
+    for f in range(11):
       input("User : ")
       input("password: \033[0;30;40m")
       print("\033[0m\033[1;32;48m")

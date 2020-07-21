@@ -1,7 +1,7 @@
 import os
 import time
 
-location = input("where is this program? ")
+location = os.getcwd()
 #standard: \033[0m\033[1;32;48m
 #blåbakrund: \033[32;44m
 #gulbakrund: \033[0;37;43m
@@ -30,7 +30,10 @@ if login == 1:
   open2 = location + "saves/cach/location"
   f = open(open2, "w")
   if location != '':
-    f.write(location + "home/")
+    try:
+      f.write(location + "home/" + usr)
+    except:
+      f.write(location + "home/")
   elif location == '':
     f.write("home/")
   open3 = location + "saves/configurations.py"
@@ -146,5 +149,13 @@ while power == 1:
         try:
           exec(y)
         except:
-          print("\033[0m\033[1;32;48mSyntaxError: ", y, " ")
-          tf = "f"
+          try:
+            hesdfsfdjlkasjdhfjal = i[1]
+            print("\033[0m\033[1;32;48mSyntaxError: ", y, " ")
+            tf = "f"
+          except:
+            try:
+              exec("print(" + i + ")")
+            except:
+              print("\033[0m\033[1;32;48mSyntaxError: ", y, " ")
+              tf = "f"
