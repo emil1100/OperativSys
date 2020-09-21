@@ -1,7 +1,5 @@
-w = 1
-gf = 0
 y = 0
-while w == 1:
+for gkjasdf in range(17):
   x = input("Betyg: ")
   if x == "A":
     y = y + 20
@@ -17,6 +15,5 @@ while w == 1:
     y = y
   elif x == "Klart!":
     w = 0
-  else:
-    y = y
 print(y)
+print(y/17)

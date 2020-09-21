@@ -4,8 +4,15 @@
 open6 = location + "saves/cach/location"
 f = open(open6, "r")
 LocationV = f.read()
-if LocationV == location + "home/":
-  LocationV = "~"
+Location1 = LocationV.split(usr)
+try:
+  sadfhökj12414adsfjlhlh14j = Location1[2]
+  try:
+    ahsdufgieufsklfahiueajsdhvnal2351352dsjf = Location1[3]
+  except:
+    LocationV = "~"
+except:
+  hasdkjlfh = "1"
 
 computername = "Cherman"
 

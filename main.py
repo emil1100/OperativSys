@@ -1,7 +1,10 @@
 import os
 import time
 
+
 location = os.getcwd()
+#locationS = location + "/"
+
 #standard: \033[0m\033[1;32;48m
 #blåbakrund: \033[32;44m
 #gulbakrund: \033[0;37;43m
@@ -40,6 +43,19 @@ if login == 1:
   f = open(open3, "r")
   ff = f.read()
   tf = "t"
+  hej = location.split("/")
+  print(hej)
+  i = 0
+  importl = ""
+  hawekfj = 1
+  while hawekfj == 1:
+    try:
+      if hej[i] != "":
+        importl = importl + "." + hej[i]
+      i = i + 1
+    except:
+      hawekfj = 0
+      exec("from " + importl + ".home.root.program.commands import f")
   
   print("\033[1;32;48m")
   print("   00000000000000000000000   ")
@@ -60,7 +76,7 @@ try:
   if usr == "":
     fssdif
 except:
-  for i in range(99999999999999999999999999999999 * 99999999999999999999999999999999999999999999999999999999999):
+  for i in range(999999999999999999999999999 ** 99):
     slleep = 0.005
     print("\033[0m\033[0;31;48mHacker Alarm!")
     time.sleep(slleep)
@@ -124,38 +140,14 @@ while power == 1:
   y = input(con1 + " ")
   tf = "t"
   print("\033[0m\033[1;32;48m")
-  ii = y.split()
-  i = ii
+  i = y.split()
   try:
-    ii = "home/root/program/" + i[0] + ".py"
-    open4 = location + ii
-    p = open(open4, "r")
-    k = p.read()
-    exec(k)
+    open12356 = location + "home/root/program/funktioner.py"
+    f = open(open12356, "r")
+    iii = f.read()
+    exec(iii)
   except:
     try:
-      ii = "home/root/program/" + i[0]
-      open4 = location + ii
-      p = open(open4, "r")
-      k = p.read()
+      exec("f." + i[0])
     except:
-      try:
-        ii = "home/root/program/funktioner/" + i[0] + ".py"
-        open5 = location + ii
-        p = open(open5, "r")
-        k = p.read()
-        exec(k)
-      except:
-        try:
-          exec(y)
-        except:
-          try:
-            hesdfsfdjlkasjdhfjal = i[1]
-            print("\033[0m\033[1;32;48mSyntaxError: ", y, " ")
-            tf = "f"
-          except:
-            try:
-              exec("print(" + i + ")")
-            except:
-              print("\033[0m\033[1;32;48mSyntaxError: ", y, " ")
-              tf = "f"
+      tf = "f"
